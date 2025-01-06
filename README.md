@@ -1,4 +1,4 @@
-# Fact & Admin Statistics
+# Fact & Admin Statistics Application
 
 This is a Ktor-based server application that provides APIs for managing facts and retrieving admin statistics. The application supports both general user and admin functionalities.
 

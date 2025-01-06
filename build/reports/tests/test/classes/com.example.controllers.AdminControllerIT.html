@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AdminControllerIT</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AdminControllerIT</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.controllers.html">com.example.controllers</a> &gt; AdminControllerIT</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.630s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">GET admin statistics with invalid API key should return unauthorized()</td>
+<td class="success">0.028s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">GET admin statistics with valid API key should return statistics()</td>
+<td class="success">0.191s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">GET admin statistics without API key should return unauthorized()</td>
+<td class="success">0.411s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2025-01-06 19:33:20.303 [DefaultDispatcher-worker-1] TRACE i.ktor.client.plugins.HttpPlainText - Adding Accept-Charset=UTF-8 to http:///admin/statistics
+2025-01-06 19:33:20.380 [DefaultDispatcher-worker-2 @call-context#3] INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2025-01-06 19:33:20.428 [DefaultDispatcher-worker-2 @call-context#3] INFO  io.ktor.test - Application started in 0.061 seconds.
+2025-01-06 19:33:20.431 [DefaultDispatcher-worker-1 @coroutine#4] INFO  io.ktor.test - Responding at http://localhost:80
+2025-01-06 19:33:20.432 [DefaultDispatcher-worker-1 @coroutine#4] INFO  io.ktor.test - Responding at https://localhost:443
+2025-01-06 19:33:20.462 [DefaultDispatcher-worker-2 @request#3] TRACE io.ktor.server.routing.Routing - Trace for [admin, statistics]
+/, segment:0 -&gt; SUCCESS @ /
+  /facts, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /facts
+  /admin, segment:1 -&gt; SUCCESS @ /admin
+    /admin/statistics, segment:2 -&gt; SUCCESS @ /admin/statistics
+      /admin/statistics/(method:GET), segment:2 -&gt; SUCCESS @ /admin/statistics/(method:GET)
+Matched routes:
+  &quot;&quot; -&gt; &quot;admin&quot; -&gt; &quot;statistics&quot; -&gt; &quot;(method:GET)&quot;
+Routing resolve result:
+  SUCCESS @ /admin/statistics/(method:GET)
+2025-01-06 19:33:20.472 [DefaultDispatcher-worker-2 @request#3] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from String to OutgoingContent for the GET /admin/statistics request because the String type is ignored. See [ContentNegotiationConfig::ignoreType].
+2025-01-06 19:33:20.489 [DefaultDispatcher-worker-2 @request#3] TRACE io.ktor.server.routing.Routing - Trace for [admin, statistics]
+/, segment:0 -&gt; FAILURE &quot;Not all segments matched&quot; @ /
+Matched routes:
+  No results
+Routing resolve result:
+  FAILURE &quot;No matched subtrees found&quot; @ /
+2025-01-06 19:33:20.517 [DefaultDispatcher-worker-1] TRACE i.k.client.plugins.HttpCallValidator - Validating response for request http://localhost/admin/statistics
+2025-01-06 19:33:20.518 [DefaultDispatcher-worker-1] TRACE i.k.c.p.DefaultResponseValidation - Skipping default response validation for http://localhost/admin/statistics
+2025-01-06 19:33:20.537 [DefaultDispatcher-worker-1] TRACE i.k.c.plugins.defaultTransformers - Transformed with default transformers response body for http://localhost/admin/statistics to class kotlinx.io.Source
+2025-01-06 19:33:20.588 [DefaultDispatcher-worker-1] TRACE i.ktor.client.plugins.HttpPlainText - Adding Accept-Charset=UTF-8 to http:///admin/statistics
+2025-01-06 19:33:20.589 [DefaultDispatcher-worker-1 @call-context#15] INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2025-01-06 19:33:20.590 [DefaultDispatcher-worker-1 @call-context#15] INFO  io.ktor.test - Application started in 0.001 seconds.
+2025-01-06 19:33:20.591 [DefaultDispatcher-worker-3 @coroutine#16] INFO  io.ktor.test - Responding at http://localhost:80
+2025-01-06 19:33:20.591 [DefaultDispatcher-worker-3 @coroutine#16] INFO  io.ktor.test - Responding at https://localhost:443
+2025-01-06 19:33:20.594 [DefaultDispatcher-worker-4 @request#15] TRACE io.ktor.server.routing.Routing - Trace for [admin, statistics]
+/, segment:0 -&gt; SUCCESS @ /
+  /facts, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /facts
+  /admin, segment:1 -&gt; SUCCESS @ /admin
+    /admin/statistics, segment:2 -&gt; SUCCESS @ /admin/statistics
+      /admin/statistics/(method:GET), segment:2 -&gt; SUCCESS @ /admin/statistics/(method:GET)
+Matched routes:
+  &quot;&quot; -&gt; &quot;admin&quot; -&gt; &quot;statistics&quot; -&gt; &quot;(method:GET)&quot;
+Routing resolve result:
+  SUCCESS @ /admin/statistics/(method:GET)
+2025-01-06 19:33:20.595 [DefaultDispatcher-worker-4 @request#15] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from String to OutgoingContent for the GET /admin/statistics request because the String type is ignored. See [ContentNegotiationConfig::ignoreType].
+2025-01-06 19:33:20.596 [DefaultDispatcher-worker-4 @request#15] TRACE io.ktor.server.routing.Routing - Trace for [admin, statistics]
+/, segment:0 -&gt; FAILURE &quot;Not all segments matched&quot; @ /
+Matched routes:
+  No results
+Routing resolve result:
+  FAILURE &quot;No matched subtrees found&quot; @ /
+2025-01-06 19:33:20.600 [DefaultDispatcher-worker-1] TRACE i.k.client.plugins.HttpCallValidator - Validating response for request http://localhost/admin/statistics
+2025-01-06 19:33:20.600 [DefaultDispatcher-worker-1] TRACE i.k.c.p.DefaultResponseValidation - Skipping default response validation for http://localhost/admin/statistics
+2025-01-06 19:33:20.602 [DefaultDispatcher-worker-1] TRACE i.k.c.plugins.defaultTransformers - Transformed with default transformers response body for http://localhost/admin/statistics to class kotlinx.io.Source
+2025-01-06 19:33:20.618 [DefaultDispatcher-worker-4] TRACE i.ktor.client.plugins.HttpPlainText - Adding Accept-Charset=UTF-8 to http:///admin/statistics
+2025-01-06 19:33:20.620 [DefaultDispatcher-worker-4 @call-context#28] INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2025-01-06 19:33:20.621 [DefaultDispatcher-worker-4 @call-context#28] INFO  io.ktor.test - Application started in 0.002 seconds.
+2025-01-06 19:33:20.622 [DefaultDispatcher-worker-1 @coroutine#29] INFO  io.ktor.test - Responding at http://localhost:80
+2025-01-06 19:33:20.623 [DefaultDispatcher-worker-1 @coroutine#29] INFO  io.ktor.test - Responding at https://localhost:443
+2025-01-06 19:33:20.626 [DefaultDispatcher-worker-4 @request#28] TRACE io.ktor.server.routing.Routing - Trace for [admin, statistics]
+/, segment:0 -&gt; SUCCESS @ /
+  /facts, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /facts
+  /admin, segment:1 -&gt; SUCCESS @ /admin
+    /admin/statistics, segment:2 -&gt; SUCCESS @ /admin/statistics
+      /admin/statistics/(method:GET), segment:2 -&gt; SUCCESS @ /admin/statistics/(method:GET)
+Matched routes:
+  &quot;&quot; -&gt; &quot;admin&quot; -&gt; &quot;statistics&quot; -&gt; &quot;(method:GET)&quot;
+Routing resolve result:
+  SUCCESS @ /admin/statistics/(method:GET)
+2025-01-06 19:33:20.759 [DefaultDispatcher-worker-4 @request#28] TRACE io.ktor.server.routing.Routing - Trace for [admin, statistics]
+/, segment:0 -&gt; FAILURE &quot;Not all segments matched&quot; @ /
+Matched routes:
+  No results
+Routing resolve result:
+  FAILURE &quot;No matched subtrees found&quot; @ /
+2025-01-06 19:33:20.760 [DefaultDispatcher-worker-6] TRACE i.k.client.plugins.HttpCallValidator - Validating response for request http://localhost/admin/statistics
+2025-01-06 19:33:20.761 [DefaultDispatcher-worker-6] TRACE i.k.c.p.DefaultResponseValidation - Skipping default response validation for http://localhost/admin/statistics
+2025-01-06 19:33:20.761 [DefaultDispatcher-worker-6] TRACE i.k.c.plugins.defaultTransformers - Transformed with default transformers response body for http://localhost/admin/statistics to class kotlinx.io.Source
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.4</a> at Jan 6, 2025, 7:33:24 PM</p>
+</div>
+</div>
+</body>
+</html>
