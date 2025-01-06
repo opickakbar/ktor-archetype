@@ -1,4 +1,4 @@
-# Fact & Admin Statistics Application
+# Fact & Admin Statistics
 
 This is a Ktor-based server application that provides APIs for managing facts and retrieving admin statistics. The application supports both general user and admin functionalities.
 
@@ -38,7 +38,7 @@ Before you get started, ensure you have the following installed on your machine:
        uselessFactApiUrl: "https://uselessfacts.jsph.pl/random.json?language=en"
        apiKey: "your-admin-api-key"
    ```
-   Alternatively, you can modify these variables as you want.
+   Please adjust according your needs.
 
 ---
 
@@ -61,6 +61,17 @@ To execute all tests:
 ```
 
 The tests include both integration and unit tests for controllers, services, and repositories.
+
+---
+
+## Build the application
+
+To build the application:
+```bash
+./gradlew clean build
+```
+
+This will generate the JAR files in the build/libs directory.
 
 ---
 
