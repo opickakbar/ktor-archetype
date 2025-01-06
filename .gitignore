@@ -5,3 +5,4 @@ local.properties
 *.lock
 /app/snippets-api
 *.code-workspace
+.idea
