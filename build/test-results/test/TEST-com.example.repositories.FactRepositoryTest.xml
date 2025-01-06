@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.repositories.FactRepositoryTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-01-06T18:33:22" hostname="ZALANDO-70811" time="0.013">
+  <properties/>
+  <testcase name="retrieveFact should return null if shortened URL does not exist()" classname="com.example.repositories.FactRepositoryTest" time="0.002"/>
+  <testcase name="retrieveAllFacts should return all stored facts()" classname="com.example.repositories.FactRepositoryTest" time="0.002"/>
+  <testcase name="getAccessStatistics should return correct statistics()" classname="com.example.repositories.FactRepositoryTest" time="0.002"/>
+  <testcase name="incrementAccessCount should increase access count for a given shortened URL()" classname="com.example.repositories.FactRepositoryTest" time="0.001"/>
+  <testcase name="storeFact should store a fact with shortened URL and permalink()" classname="com.example.repositories.FactRepositoryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
