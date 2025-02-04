@@ -1,11 +1,11 @@
 # Ktor Project Archetype
 
-This repository serves as my personal template/archetype for Ktor-based server applications. Ktor is a functional, non-blocking backend framework designed for building asynchronous, high-performance applications. This repo provides a robust foundation with an implemented MVC pattern following the DRY concept. It also includes commonly used dependencies pre-installed to accelerate development.
+This repository serves as my template/archetype for Ktor-based server applications. Ktor is a functional, non-blocking backend framework designed for building asynchronous, high-performance applications. This project provides a robust foundation with a structured architecture that follows the **separation of concerns** principle, ensuring scalability and maintainability even in a functional environment. It also includes commonly used dependencies pre-installed to accelerate development.
 
 ## 🚀 Features
 - **Non-blocking Architecture:** Built with Ktor's asynchronous, functional programming capabilities for high-performance applications.
-- **MVC Architecture:** Clean separation of concerns for maintainability.
-- **Pre-configured Dependencies:** Includes popular libraries for faster setup.
+- **Separation of Concerns:** A well-structured codebase for scalability and maintainability.
+- **Pre-configured Dependencies:** Includes common libraries for faster setup.
 - **Scalable Structure:** Ready to support small to large-scale applications.
 
 ---
@@ -89,10 +89,15 @@ The JAR files will be generated in the `build/libs` directory.
 ```plaintext
 src/
 ├── main/
-│   ├── kotlin/       # Application source code
-│   └── resources/    # Configuration files
-├── test/             # Unit and integration tests
-└── build.gradle.kts  # Build configuration
+│   ├── kotlin/
+│   │   ├── controllers/   # Handles incoming requests and routes
+│   │   ├── dtos/          # Data Transfer Objects for API communication
+│   │   ├── repository/    # Data persistence layer
+│   │   ├── services/      # Business logic and application services
+│   │   └── utils/         # Utility classes and helper functions
+│   └── resources/         # Configuration files
+├── test/                  # Unit and integration tests
+└── build.gradle.kts       # Build configuration
 ```
 
 ---
