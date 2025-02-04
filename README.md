@@ -1,99 +1,100 @@
-# Fact & Admin Statistics
+# Ktor Project Archetype
 
-This is a Ktor-based server application that provides APIs for managing facts and retrieving admin statistics. The application supports both general user and admin functionalities.
+This repository serves as my personal template/archetype for Ktor-based server applications. Ktor is a functional, non-blocking backend framework designed for building asynchronous, high-performance applications. This repo provides a robust foundation with an implemented MVC pattern following the DRY concept. It also includes commonly used dependencies pre-installed to accelerate development.
+
+## 🚀 Features
+- **Non-blocking Architecture:** Built with Ktor's asynchronous, functional programming capabilities for high-performance applications.
+- **MVC Architecture:** Clean separation of concerns for maintainability.
+- **Pre-configured Dependencies:** Includes popular libraries for faster setup.
+- **Scalable Structure:** Ready to support small to large-scale applications.
 
 ---
 
-## Table of Contents
+## 📋 Table of Contents
 - [Prerequisites](#prerequisites)
 - [Setup Instructions](#setup-instructions)
 - [Running the Application](#running-the-application)
 - [Running Tests](#running-tests)
-- [API Documentation](#api-documentation)
+- [Build Instructions](#build-instructions)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
-## Prerequisites
-Before you get started, ensure you have the following installed on your machine:
+## 🛠️ Prerequisites
+Ensure you have the following installed on your machine:
 
-- **Java Development Kit (JDK)**: Version 17 or above
-- **Gradle**: Version 7 or above
-- **Internet Access**: Required to fetch random facts from the external API
+- **Java Development Kit (JDK):** Version 17 or above
+- **Gradle:** Version 7 or above
 
 ---
 
-## Setup Instructions
+## ⚙️ Setup Instructions
 
-1. Install dependencies:
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/opickakbar/ktor-project-archetype.git
+   cd ktor-project-archetype
+   ```
+
+2. **Install Dependencies:**
    ```bash
    ./gradlew dependencies
    ```
 
-2. Set up the configuration:
-   Take a look at the `application.yaml` file under `src/main/resources` with the following structure:
+3. **Configure the Application:**
+   Update `application.yaml` under `src/main/resources`:
    ```yaml
    ktor:
      application:
        baseUrl: "http://localhost:8080"
-       uselessFactApiUrl: "https://uselessfacts.jsph.pl/random.json?language=en"
-       apiKey: "your-admin-api-key"
+       apiKey: "your-api-key"
    ```
-   Please adjust according your needs.
 
 ---
 
-## Running the Application
+## 🚀 Running the Application
 
-To start the server in development mode:
+Start the server in development mode:
 ```bash
 ./gradlew run
 ```
-
 The application will be available at `http://localhost:8080` by default.
 
 ---
 
-## Running Tests
+## ✅ Running Tests
 
-To execute all tests:
+Run all tests:
 ```bash
 ./gradlew test
 ```
-
-The tests include both integration and unit tests for controllers, services, and repositories.
+This includes both unit and integration tests for controllers, services, and repositories.
 
 ---
 
-## Build the application
+## 🏗️ Build Instructions
 
 To build the application:
 ```bash
 ./gradlew clean build
 ```
-
-This will generate the JAR files in the build/libs directory.
+The JAR files will be generated in the `build/libs` directory.
 
 ---
 
-## API Documentation
+## 🗂️ Project Structure
 
-### Fact APIs
-- **POST /facts**: Fetches a random fact and generates a shortened URL.
-- **GET /facts**: Retrieves all stored facts.
-- **GET /facts/{shortenedUrl}**: Retrieves a specific fact by its shortened URL.
-- **GET /facts/{shortenedUrl}/redirect**: Redirects to the original fact URL.
-
-### Admin APIs
-- **GET /admin/statistics**: Retrieves access statistics. Requires `X-API-KEY` header.
-
-#### Headers
-For Admin APIs, include the following header:
-```json
-{
-  "X-API-KEY": "your-admin-api-key"
-}
+```plaintext
+src/
+├── main/
+│   ├── kotlin/       # Application source code
+│   └── resources/    # Configuration files
+├── test/             # Unit and integration tests
+└── build.gradle.kts  # Build configuration
 ```
 
-## Thank You
+---
 
-Copyright © 2025 - Muhammad Taufik Akbar
+**Built with ❤️**
