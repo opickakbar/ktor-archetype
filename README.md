@@ -17,8 +17,6 @@ This repository serves as my template/archetype for Ktor-based server applicatio
 - [Running Tests](#running-tests)
 - [Build Instructions](#build-instructions)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
